@@ -1,0 +1,9 @@
+<h1><%= @address.name %></h1>
+<p><%= @address.street %></p>
+<p><%= @address.zip %></p>
+<p><%= @address.city %></p>
+<p><%= @address.phone %></p>
+<p><%= @address.email %></p>
+
+<%= link_to "Edit", edit_address_path(@address) %>
+<%= link_to "Delete", address_path(@address), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>

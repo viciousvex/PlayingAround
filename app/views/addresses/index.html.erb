@@ -1,0 +1,12 @@
+<h1>Hello rails. This is the list of addresses.</h1>
+
+<ul>
+  <% @addresses.each do |address| %>
+    <li>
+      <a href=<%= address_path(address) %>">
+      <%= address.name %></a>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "New address", new_address_path %>
+
